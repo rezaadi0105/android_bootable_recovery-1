@@ -789,9 +789,6 @@
                 <!-- WARNING: you should also set the property ro.adb.secure=1 to block root adb access from untrusted computers -->
 				<action function="set">tw_unlock_pass=0</action>
 				<action function="page">%tw_clear_destination%</action>
-                <!-- Set tw_unlock_pass to anything different from 0 to activate password locking -->
-                <!-- WARNING: you should also set the property ro.adb.secure=1 to block root adb access from untrusted computers -->
-				<action function="set">tw_unlock_pass=0</action>
 			</action>
 		</page>
 
