@@ -3436,6 +3436,13 @@
 
 			<listbox style="advanced_listbox">
 				<placement x="%center_x%" y="%row2_y%" w="%content_half_width%" h="%fileselector_install_height%"/>
+				<listitem name="{@lock_twrp_btn=Lock TWRP}">
+					<condition var1="tw_unlock_pass" op="!=" var2="0"/>
+					<actions>
+						<action function="set">tw_pass=</action>
+						<action function="reload"/>
+					</actions>
+				</listitem>
 				<listitem name="{@reload_theme_btn=Reload Theme}">
 					<action function="reload"/>
 				</listitem>
@@ -3547,14 +3554,6 @@
 					<action function="getpartitiondetails">tw_storage_path</action>
 					<action function="page">partsdcardcheck</action>
 				</actions>
-			</button>
-
-			<button style="main_button">
-				<condition var1="tw_unlock_pass" op="!=" var2="0"/>
-				<placement x="%center_x%" y="%row15a_y%"/>
-				<text>Lock TWRP</text>
-				<action function="set">tw_pass=</action>
-				<action function="reload"/>
 			</button>
 
 			<action>
